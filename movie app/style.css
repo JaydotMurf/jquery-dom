@@ -1,61 +1,75 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 50px;
-}
-
-.form-container {
-  flex: 1;
-  max-width: 400px;
-  margin-right: 20px;
-}
-
-h2 {
-  margin-bottom: 10px;
+body {
+  background-color: #f2f2f2;
 }
 
 form {
   display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-bottom: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 input {
-  margin-bottom: 15px;
+  margin: 10px;
   padding: 10px;
-  border: none;
+  width: 300px;
   border-radius: 5px;
-  background-color: #f5f5f5;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* CSS Style for the Submit Button */
 button {
+  margin: 10px;
   padding: 10px;
-  border: none;
+  width: 150px;
   border-radius: 5px;
+  border: none;
   background-color: #4caf50;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.entries-container {
-  flex: 1;
-  max-width: 400px;
+/* CSS Style for the Movie List */
+ul {
+  list-style: none;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#entries {
-  border: 1px solid #ccc;
+/* CSS Style for the Movie Items */
+li {
+  margin-top: 10px;
   padding: 10px;
-  height: 300px;
-  overflow-y: auto;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+/* CSS Style for the Remove Button */
+.remove {
+  background-color: #f44336;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
