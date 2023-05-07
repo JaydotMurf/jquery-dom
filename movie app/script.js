@@ -11,19 +11,19 @@ $('document').ready(() => {
   $('#sort-btn').on('click', () => {
     const movieList = $('#movie-list').children().toArray();
 
-    const sortedList = movieList.sort((a, b) => {
-      const titleA = $(a).find('.movie-title').text().toLowerCase();
-      const titleB = $(b).find('.movie-title').text().toLowerCase();
-      if (titleA < titleB) {
-        return -1;
-      } else if (titleA > titleB) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
+    function compareTitles(movieA, movieB) {
+      const titleA = $(movieA).find('.movie-title').text().toLowerCase();
+      const titleB = $(movieB).find('.movie-title').text().toLowerCase();
+      console.log(titleA.localeCompare(titleB));
+      return titleA.localeCompare(titleB);
+    }
 
-    // Append the sorted list back to the movie list
+    function sortByTitle(movieList) {
+      return movieList.sort(compareTitles);
+    }
+
+    const sortedList = sortByTitle(movieList);
+
     sortedList.forEach((movie) => {
       $('#movie-list').append(movie);
     });
